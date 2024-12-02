@@ -20,7 +20,7 @@ WORKDIR /app
 RUN npm install -g serve
 
 # Copy the build from the previous step
-COPY --from=build /app/build /app/build
+COPY --from=build /app/dist /app/build
 
 # Expose port 3000 (or any port you want)
 EXPOSE 3000
